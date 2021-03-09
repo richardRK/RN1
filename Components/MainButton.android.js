@@ -30,13 +30,11 @@ const MainButton = (props) => {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    // flex: 1,
     borderRadius: 25,
     overflow: "hidden",
     // padding: 10,
   },
   button: {
-    flexDirection: "row",
     backgroundColor: Colors.primary,
     paddingVertical: 12,
     paddingHorizontal: 20,
@@ -46,11 +44,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
-    flexDirection: "row",
-    fontFamily: "open-sans",
-    alignItems: "center",
-    justifyContent: "space-around",
-    // paddingHorizontal: 15,
+    fontSize: 15
   },
 });
 

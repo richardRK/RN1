@@ -4,8 +4,7 @@ import { StyleSheet, View } from "react-native";
 import Header from "./Components/Header";
 import StartGameScreen from "./Screens/StartGameScreen";
 import GameOverScreen from "./Screens/GameOverScreen";
-import GameScreen from './Screens/GameScreen';
-
+import GameScreen from "./Screens/GameScreen";
 
 import * as Font from "expo-font";
 
