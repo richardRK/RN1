@@ -9,17 +9,20 @@ import {
   Dimensions,
 } from "react-native";
 
+import { Ionicons } from '@expo/vector-icons';
+
+import MainButton from '../Components/MainButton';
+
+
 import NumberContainer from "../Components//NumberContainer";
 import Card from "../Components/Card";
 import DefaultStyles from "../Constants/default-styles";
 import BodyText from "../Components/BodyText";
 
-
 const generateRandomBetween = (min, max, exclude) => {
   min = Math.ceil(min);
   max = Math.floor(max);
 
-  
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
   if (rndNum === exclude) {
     return generateRandomBetween(min, max, exclude);
@@ -99,8 +102,6 @@ const GameScreen = (props) => {
     ]);
   };
 
-  
-
   let listContainerStyle = styles.listContainer;
 
   if (availableDeviceWidth < 350) {
@@ -112,15 +113,13 @@ const GameScreen = (props) => {
       <View style={styles.screen}>
         <Text style={DefaultStyles.title}>Opponent's Guess</Text>
         <View style={styles.controls}>
-          <Button
-            title="LOWER"
-            onPress={nextGuessHandler.bind(this, "lower")}
-          />
+          <MainButton onPress={nextGuessHandler.bind(this, "lower")}>
+            <Ionicons name="md-remove" size={24} color="white" />
+          </MainButton>
           <NumberContainer>{currentGuess}</NumberContainer>
-          <Button
-            title="GREATER"
-            onPress={nextGuessHandler.bind(this, "greater")}
-          />
+          <MainButton onPress={nextGuessHandler.bind(this, "greater")}>
+            <Ionicons name="md-add" size={24} color="white" />
+          </MainButton>
         </View>
         <View style={listContainerStyle}>
           {/* <ScrollView contentContainerStyle={styles.list}>
@@ -142,11 +141,12 @@ const GameScreen = (props) => {
       <Text style={DefaultStyles.title}>Opponent's Guess</Text>
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card style={styles.buttonContainer}>
-        <Button title="LOWER" onPress={nextGuessHandler.bind(this, "lower")} />
-        <Button
-          title="GREATER"
-          onPress={nextGuessHandler.bind(this, "greater")}
-        />
+        <MainButton onPress={nextGuessHandler.bind(this, "lower")}>
+          <Ionicons name="md-remove" size={24} color="white" />
+        </MainButton>
+        <MainButton onPress={nextGuessHandler.bind(this, "greater")}>
+          <Ionicons name="md-add" size={24} color="white" />
+        </MainButton>
       </Card>
 
       <View style={listContainerStyle}>
@@ -171,10 +171,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   controls: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '80%'
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    width: "80%",
   },
   buttonContainer: {
     flexDirection: "row",
