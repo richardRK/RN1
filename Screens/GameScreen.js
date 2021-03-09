@@ -99,6 +99,8 @@ const GameScreen = (props) => {
     ]);
   };
 
+  
+
   let listContainerStyle = styles.listContainer;
 
   if (availableDeviceWidth < 350) {
