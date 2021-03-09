@@ -9,10 +9,9 @@ import {
   Dimensions,
 } from "react-native";
 
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 
-import MainButton from '../Components/MainButton';
-
+import MainButton from "../Components/MainButton";
 
 import NumberContainer from "../Components//NumberContainer";
 import Card from "../Components/Card";

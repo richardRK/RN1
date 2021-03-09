@@ -1,11 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Colors from '../Constants/colors';
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
+import Colors from "../Constants/colors";
 
-
-function MainButton(props) {
+const MainButton = (props) => {
   return (
     <TouchableOpacity activeOpacity={0.6} onPress={props.onPress}>
       <View style={styles.button}>
@@ -13,9 +11,7 @@ function MainButton(props) {
       </View>
     </TouchableOpacity>
   );
-}
-
-MainButton.propTypes = {};
+};
 
 const styles = StyleSheet.create({
   button: {
